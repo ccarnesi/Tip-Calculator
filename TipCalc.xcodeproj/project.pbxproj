@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CE742ADF2184F4F5003D6B55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE742ADE2184F4F5003D6B55 /* AppDelegate.swift */; };
-		CE742AE12184F4F5003D6B55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE742AE02184F4F5003D6B55 /* ViewController.swift */; };
 		CE742AE42184F4F5003D6B55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE742AE22184F4F5003D6B55 /* Main.storyboard */; };
 		CE742AE62184F4F6003D6B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE742AE52184F4F6003D6B55 /* Assets.xcassets */; };
 		CE742AE92184F4F6003D6B55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE742AE72184F4F6003D6B55 /* LaunchScreen.storyboard */; };
+		CE742AF121850044003D6B55 /* TipCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE742AF021850044003D6B55 /* TipCalculatorViewController.swift */; };
+		CE742AF3218506D6003D6B55 /* TicCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE742AF2218506D6003D6B55 /* TicCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE742ADB2184F4F5003D6B55 /* TipCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE742ADE2184F4F5003D6B55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE742AE02184F4F5003D6B55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE742AE32184F4F5003D6B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE742AE52184F4F6003D6B55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE742AE82184F4F6003D6B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE742AEA2184F4F6003D6B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE742AF021850044003D6B55 /* TipCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorViewController.swift; sourceTree = "<group>"; };
+		CE742AF2218506D6003D6B55 /* TicCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				CE742ADE2184F4F5003D6B55 /* AppDelegate.swift */,
-				CE742AE02184F4F5003D6B55 /* ViewController.swift */,
+				CE742AF021850044003D6B55 /* TipCalculatorViewController.swift */,
+				CE742AF2218506D6003D6B55 /* TicCalculator.swift */,
 				CE742AE22184F4F5003D6B55 /* Main.storyboard */,
 				CE742AE52184F4F6003D6B55 /* Assets.xcassets */,
 				CE742AE72184F4F6003D6B55 /* LaunchScreen.storyboard */,
@@ -135,7 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE742AE12184F4F5003D6B55 /* ViewController.swift in Sources */,
+				CE742AF3218506D6003D6B55 /* TicCalculator.swift in Sources */,
+				CE742AF121850044003D6B55 /* TipCalculatorViewController.swift in Sources */,
 				CE742ADF2184F4F5003D6B55 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

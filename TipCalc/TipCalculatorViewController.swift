@@ -12,19 +12,46 @@ class TipCalculatorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        amountBeforeTaxTextField.becomeFirstResponder()
+    }
+    @IBOutlet weak var amountBeforeTaxTextField: UITextField!
+    @IBOutlet weak var numberOfPeopleLabel: UILabel!
+    @IBOutlet weak var totalResultLabel: UILabel!
+    @IBOutlet weak var eachPersonAmount: UILabel!
+    @IBOutlet weak var tipPercentageLabel: UILabel!
+    @IBOutlet weak var tipPercentageSlider: UISlider!
+    @IBOutlet weak var numberOfPeopleSlider: UISlider!
+    
+    
+    var tipCalculator = TipCalculator(amountBeforeTax: 0, tipPercentage: 0.10)
+    func calculateBill(){
+        tipCalculator.tipPercentage = Double(tipPercentageSlider.value)/100
+        tipCalculator.amountBeforeTax = (amountBeforeTaxTextField.text! as NSString).doubleValue
+        tipCalculator.calculateTip()
+        updateUI()
+    }
+    func updateUI(){
+        totalResultLabel.text = String(format: "$%0.2f", tipCalculator.totalAmount)
+        totalResultLabel.sizeToFit()
+        let numberOfPeople: Int = Int(numberOfPeopleSlider.value)
+        eachPersonAmount.text = String(format: "$%0.2f", tipCalculator.totalAmount/Double(numberOfPeople))
+        eachPersonAmount.sizeToFit()
+        
+    }
+    // MARK: - Actions
+    
+    @IBAction func tipSliderValueChange(sender: Any){
+        (sender as AnyObject).setValue((sender as AnyObject).value.rounded(.down), animated: true)
+        tipPercentageLabel.text = String(format: "Tip: %02d%%", Int(tipPercentageSlider.value))
+        calculateBill()
+    }
+    @IBAction func numberOfPeopleSliderChange(sender: Any){
+        (sender as AnyObject).setValue((sender as AnyObject).value.rounded(.down), animated: true)
+        numberOfPeopleLabel.text = String("Split: \(Int(numberOfPeopleSlider.value))")
+        calculateBill()
+    }
+    @IBAction func amountBeforeTaxTextFieldChanged(_ sender: Any) {
+        calculateBill()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
